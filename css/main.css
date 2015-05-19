@@ -1,0 +1,112 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+body {
+      padding-bottom: 20px;
+      }
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin: 15px 0 40px;
+}
+
+.h3, h3 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.navbar-header {
+    height: 75px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-brand img {
+    display: inline;
+    height: 50px;
+}
+
+#boxIdentificacao{
+    background-color:#c5e9f9;
+    border-radius: 4px 4px 0 0;
+}
+
+#boxDados{
+    background-color: #eee;
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 20px;
+}
+
+.botaoIdentificacao{
+    margin: 15px 0 30px;
+}
+
+#mostrarCampoCPF,
+#mostrarCampoCNPJ,
+#mostrarCampoContribuinte,
+#mostrarCampoImovel {
+    margin: 25px 0 45px;
+}
+
+.listaParcelas li,
+.listaTotais li {
+    list-style-type: none;
+}
+
+.listaTotais li {
+    margin-bottom: 10px;
+}
+
+.disabled label{
+    color:#aaaaaa;
+}
+
+.listaParcelas{
+    border-right: 1px solid #999;
+}
+
+.parcelaVencida{
+    color:red;
+}
+
+.badgeVencida{
+    color: white;
+    background-color: red;
+}
+
+#btnEmitir {
+    margin: 30px;
+}
+
+#modalEmissao .modal-body{
+    min-height: 150px;
+}
+
+#btnEncerrar{
+    margin-top: 40px;
+}
+
+.btn-secondary {
+    background-color: #474949; 
+    border-color: #474949;  
+    color: #fff;
+}
+.btn-secondary:hover, 
+.btn-secondary:focus, 
+.btn-secondary:active, 
+.btn-secondary.active, 
+.open .dropdown-toggle.btn-secondary { 
+    color: #fff; 
+    background-color: #3a3c3c; 
+    border-color: #2e2f2f; 
+}
