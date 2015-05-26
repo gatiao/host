@@ -23,7 +23,7 @@ h2 {
     padding-bottom: 15px;
 }
 
-.navbar-header {
+#cabecalhoConsulta .navbar-header {
     height: 75px;
 }
 
@@ -31,7 +31,7 @@ h2 {
     font-size: 24px;
 }
 
-.navbar-brand img {
+#cabecalhoConsulta img {
     display: inline;
     height: 50px;
 }
@@ -94,6 +94,18 @@ h2 {
 
 #btnEncerrar{
     margin-top: 40px;
+}
+
+.conteudoTopo{
+    margin-bottom: 30px;
+}
+
+.tabelaTotais{
+    
+}
+
+tfoot td.info{
+    font-weight: bold;
 }
 
 .btn-secondary {

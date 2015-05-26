@@ -26,7 +26,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" id="cabecalhoConsulta">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt="" title=""> Prefeitura Municipal de Mônaco</a>
@@ -70,7 +70,7 @@
                 <div class="input-group text-center">
                   <input type="text" class="form-control" placeholder="Digite seu CPF" id="entradaCPF">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDados" aria-expanded="false" aria-controls="boxDados">Consultar</button>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDadosCPF" aria-expanded="false" aria-controls="boxDados">Consultar</button>
                   </span>
                 </div><!-- /input-group -->
             </div>
@@ -79,7 +79,7 @@
                 <div class="input-group text-center">
                   <input type="text" class="form-control" placeholder="Digite seu CNPJ" id="entradaCNPJ">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDados" aria-expanded="false" aria-controls="boxDados">Consultar</button>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDadosCNPJ" aria-expanded="false" aria-controls="boxDados">Consultar</button>
                   </span>
                 </div><!-- /input-group -->
             </div>
@@ -88,7 +88,7 @@
                 <div class="input-group text-center">
                   <input type="text" class="form-control" placeholder="Digite seu c&oacute;digo de contribuinte" id="entradaContribuinte">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDados" aria-expanded="false" aria-controls="boxDados">Consultar</button>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDadosContribuinte" aria-expanded="false" aria-controls="boxDados">Consultar</button>
                   </span>
                 </div><!-- /input-group -->
             </div>
@@ -97,7 +97,7 @@
                 <div class="input-group text-center">
                   <input type="text" class="form-control" placeholder="Digite o c&oacute;digo do seu im&oacute;vel" id="entradaImovel">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDados" aria-expanded="false" aria-controls="boxDados">Consultar</button>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#boxDadosImovel" aria-expanded="false" aria-controls="boxDados">Consultar</button>
                   </span>
                 </div><!-- /input-group -->
             </div>
@@ -108,11 +108,11 @@
                 
     </div>
 
-    <div class="collapse container" id="boxDados">
+    <div class="collapse container" id="boxDadosCPF">
       <div class="row">
           
           <div class="col-md-12">
-              <h2>Lançamentos do {documento} informado</h2>
+              <h2>Lançamentos do CPF informado</h2>
 
               <h3>Im&oacute;vel 5863 - Rua Napole&atilde;o Bonaparte, 1356 - Ed Monique Ap 1001</h3>
           
@@ -141,10 +141,214 @@
                 <li>Total de parcelas a vencer: R$ 0,00</li>
                 <li><strong>Total selecionado para pagamento: R$ 102,00</strong></li>
             </ul>
-            <p class="text-center"><a class="btn btn-success btn-lg" href="" id="btnEmitir" data-toggle="modal" data-target="#modalEmissao"><span class="glyphicon glyphicon-barcode"></span> Emitir Carn&ecirc;s</a></p>
+            <p class="text-center"><a class="btn btn-success btn-lg" href="" id="btnEmitir" data-toggle="modal" data-target="#modalEmissaoCPF"><span class="glyphicon glyphicon-barcode"></span> Emitir Carn&ecirc;s</a></p>
             
             <!-- Modal -->
-            <div class="modal fade" id="modalEmissao" tabindex="-1" role="dialog" aria-labelledby="modalEmissaoLabel" aria-hidden="true">
+            <div class="modal fade" id="modalEmissaoCPF" tabindex="-1" role="dialog" aria-labelledby="modalEmissaoLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalEmissaoLabel">Carn&ecirc;s Emitidos</h4>
+                  </div>
+                  <div class="modal-body">
+                      <p>Salve e imprima os carnês abaixo:</p>
+                      <ul>
+                          <li><a href="#">Parcela 03/07:</a> R$ 102,00 - Vencimento em 10/05/2015</li>
+                      </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+          
+          
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center"><a class="btn btn-secondary btn-xs" href="" id="btnEncerrar"><span class="glyphicon glyphicon-off"></span> Encerrar</a></p>
+            </div>
+        </div>
+        
+      </div>
+    </div> <!-- /container -->
+
+    <div class="collapse container" id="boxDadosCNPJ">
+      <div class="row">
+          
+          <div class="col-md-12">
+              <h2>Lançamentos do CNPJ informado</h2>
+
+              <h3>Im&oacute;vel 5863 - Rua Napole&atilde;o Bonaparte, 1356 - Ed Monique Ap 1001</h3>
+          
+          </div>
+      </div>
+        
+      <div class="row">
+          <div class="col-md-6">
+            <h4>IPTU 2015 - <strong>Total: R$ 714,00</strong> (Parcelado em 7x)</h4>
+            <ul class="listaParcelas">
+                <li><div class="checkbox disabled"><label><input type="checkbox" disabled="" id="" value="parcela1"> Parcela 01/07 = R$ 102,00 <span class="badge">PAGO</span></label></div></li>
+                <li><div class="checkbox disabled"><label><input type="checkbox" disabled="" id="" value="parcela2"> Parcela 02/07 = R$ 102,00 <span class="badge">PAGO</span></label></div></li>
+                <li><div class="checkbox"><label class="parcelaVencida"><input type="checkbox" id="" value="parcela3" checked = "checked"> Parcela 03/07 = R$ 102,00 <span class="badge badgeVencida">VENCIDA</span></label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela4"> Parcela 04/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela5"> Parcela 05/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela6"> Parcela 06/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela7"> Parcela 07/07 = R$ 102,00</label></div></li>
+            </ul>
+          
+        </div>
+        
+        <div class="col-md-6">
+            <h4>Resumo</h4>
+            <ul class="listaTotais">
+                <li class="parcelaVencida">Total de parcelas vencidas: R$ 102,00</li>
+                <li>Total de parcelas a vencer: R$ 0,00</li>
+                <li><strong>Total selecionado para pagamento: R$ 102,00</strong></li>
+            </ul>
+            <p class="text-center"><a class="btn btn-success btn-lg" href="" id="btnEmitir" data-toggle="modal" data-target="#modalEmissaoCNPJ"><span class="glyphicon glyphicon-barcode"></span> Emitir Carn&ecirc;s</a></p>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modalEmissaoCNPJ" tabindex="-1" role="dialog" aria-labelledby="modalEmissaoLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalEmissaoLabel">Carn&ecirc;s Emitidos</h4>
+                  </div>
+                  <div class="modal-body">
+                      <p>Salve e imprima os carnês abaixo:</p>
+                      <ul>
+                          <li><a href="#">Parcela 03/07:</a> R$ 102,00 - Vencimento em 10/05/2015</li>
+                      </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+          
+          
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center"><a class="btn btn-secondary btn-xs" href="" id="btnEncerrar"><span class="glyphicon glyphicon-off"></span> Encerrar</a></p>
+            </div>
+        </div>
+        
+      </div>
+    </div> <!-- /container -->
+
+    <div class="collapse container" id="boxDadosContribuinte">
+      <div class="row">
+          
+          <div class="col-md-12">
+              <h2>Lançamentos do Contribuinte informado</h2>
+
+              <h3>Im&oacute;vel 5863 - Rua Napole&atilde;o Bonaparte, 1356 - Ed Monique Ap 1001</h3>
+          
+          </div>
+      </div>
+        
+      <div class="row">
+          <div class="col-md-6">
+            <h4>IPTU 2015 - <strong>Total: R$ 714,00</strong> (Parcelado em 7x)</h4>
+            <ul class="listaParcelas">
+                <li><div class="checkbox disabled"><label><input type="checkbox" disabled="" id="" value="parcela1"> Parcela 01/07 = R$ 102,00 <span class="badge">PAGO</span></label></div></li>
+                <li><div class="checkbox disabled"><label><input type="checkbox" disabled="" id="" value="parcela2"> Parcela 02/07 = R$ 102,00 <span class="badge">PAGO</span></label></div></li>
+                <li><div class="checkbox"><label class="parcelaVencida"><input type="checkbox" id="" value="parcela3" checked = "checked"> Parcela 03/07 = R$ 102,00 <span class="badge badgeVencida">VENCIDA</span></label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela4"> Parcela 04/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela5"> Parcela 05/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela6"> Parcela 06/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela7"> Parcela 07/07 = R$ 102,00</label></div></li>
+            </ul>
+          
+        </div>
+        
+        <div class="col-md-6">
+            <h4>Resumo</h4>
+            <ul class="listaTotais">
+                <li class="parcelaVencida">Total de parcelas vencidas: R$ 102,00</li>
+                <li>Total de parcelas a vencer: R$ 0,00</li>
+                <li><strong>Total selecionado para pagamento: R$ 102,00</strong></li>
+            </ul>
+            <p class="text-center"><a class="btn btn-success btn-lg" href="" id="btnEmitir" data-toggle="modal" data-target="#modalEmissaoContribuinte"><span class="glyphicon glyphicon-barcode"></span> Emitir Carn&ecirc;s</a></p>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modalEmissaoContribuinte" tabindex="-1" role="dialog" aria-labelledby="modalEmissaoLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalEmissaoLabel">Carn&ecirc;s Emitidos</h4>
+                  </div>
+                  <div class="modal-body">
+                      <p>Salve e imprima os carnês abaixo:</p>
+                      <ul>
+                          <li><a href="#">Parcela 03/07:</a> R$ 102,00 - Vencimento em 10/05/2015</li>
+                      </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+          
+          
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center"><a class="btn btn-secondary btn-xs" href="" id="btnEncerrar"><span class="glyphicon glyphicon-off"></span> Encerrar</a></p>
+            </div>
+        </div>
+        
+      </div>
+    </div> <!-- /container -->
+
+    <div class="collapse container" id="boxDadosImovel">
+      <div class="row">
+          
+          <div class="col-md-12">
+              <h2>Lançamentos do Im&oacute;vel informado</h2>
+
+              <h3>Im&oacute;vel 5863 - Rua Napole&atilde;o Bonaparte, 1356 - Ed Monique Ap 1001</h3>
+          
+          </div>
+      </div>
+        
+      <div class="row">
+          <div class="col-md-6">
+            <h4>IPTU 2015 - <strong>Total: R$ 714,00</strong> (Parcelado em 7x)</h4>
+            <ul class="listaParcelas">
+                <li><div class="checkbox disabled"><label><input type="checkbox" disabled="" id="" value="parcela1"> Parcela 01/07 = R$ 102,00 <span class="badge">PAGO</span></label></div></li>
+                <li><div class="checkbox disabled"><label><input type="checkbox" disabled="" id="" value="parcela2"> Parcela 02/07 = R$ 102,00 <span class="badge">PAGO</span></label></div></li>
+                <li><div class="checkbox"><label class="parcelaVencida"><input type="checkbox" id="" value="parcela3" checked = "checked"> Parcela 03/07 = R$ 102,00 <span class="badge badgeVencida">VENCIDA</span></label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela4"> Parcela 04/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela5"> Parcela 05/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela6"> Parcela 06/07 = R$ 102,00</label></div></li>
+                <li><div class="checkbox"><label><input type="checkbox" id="" value="parcela7"> Parcela 07/07 = R$ 102,00</label></div></li>
+            </ul>
+          
+        </div>
+        
+        <div class="col-md-6">
+            <h4>Resumo</h4>
+            <ul class="listaTotais">
+                <li class="parcelaVencida">Total de parcelas vencidas: R$ 102,00</li>
+                <li>Total de parcelas a vencer: R$ 0,00</li>
+                <li><strong>Total selecionado para pagamento: R$ 102,00</strong></li>
+            </ul>
+            <p class="text-center"><a class="btn btn-success btn-lg" href="" id="btnEmitir" data-toggle="modal" data-target="#modalEmissaoImovel"><span class="glyphicon glyphicon-barcode"></span> Emitir Carn&ecirc;s</a></p>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modalEmissaoImovel" tabindex="-1" role="dialog" aria-labelledby="modalEmissaoLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
